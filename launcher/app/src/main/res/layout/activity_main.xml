@@ -360,7 +360,7 @@
                     android:id="@+id/btnReorder"
                     style="@style/TopButtonIcon"
                     android:contentDescription="@string/reorder"
-                    android:drawableStart="@drawable/ic_swap_vert"
+                    android:drawableStart="@drawable/ic_edit"
                     android:nextFocusDown="@+id/grid" />
 
                 <TextView

@@ -226,7 +226,7 @@
                         android:letterSpacing="0.14"
                         android:textAllCaps="true" />
 
-                        <!-- Lunar date ("Lunar 13/9 · Year of the Horse"), shown when lunar_date is on. -->
+                        <!-- Lunar date ("Lunar 13/9 Â· Year of the Horse"), shown when lunar_date is on. -->
                         <TextView
                             android:id="@+id/lunarDate"
                             android:gravity="right"
@@ -366,7 +366,7 @@
                     android:id="@+id/btnReorder"
                     style="@style/TopButtonIcon"
                     android:contentDescription="@string/reorder"
-                    android:drawableStart="@drawable/ic_swap_vert"
+                    android:drawableStart="@drawable/ic_edit"
                     android:nextFocusDown="@+id/grid" />
 
                 <TextView
