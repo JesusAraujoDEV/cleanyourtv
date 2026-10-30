@@ -213,6 +213,16 @@
             android:exported="true"
             android:permission="android.permission.WRITE_SECURE_SETTINGS" />
 
+        <!-- A companion app asks for this after writing a theme; see ThemeReloadReceiver. -->
+        <receiver
+            android:name=".ThemeReloadReceiver"
+            android:exported="true"
+            android:permission="android.permission.WRITE_SECURE_SETTINGS">
+            <intent-filter>
+                <action android:name="com.gathin.tvhome.RELOAD_THEME" />
+            </intent-filter>
+        </receiver>
+
         <!-- The remote's Input button (KEYCODE_TV or KEYCODE_TV_INPUT) opens the input switcher, and input_key_keycodes and
          app_keys (config.xml or a theme) bring back other remote buttons; see InputKeyService. -->
         <!-- Bound again by the system after a force stop, which restarts Home on firmware that kills
