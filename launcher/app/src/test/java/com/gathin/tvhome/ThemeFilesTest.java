@@ -29,6 +29,14 @@ public class ThemeFilesTest {
         assertFalse(ThemeFiles.collectionImage("captions.txt"));
     }
 
+    @Test public void theFilmShelfIsAllowed() {
+        assertEquals("shelf/recs.json", ThemeFiles.path(Arrays.asList("shelf", "recs.json")));
+        assertEquals("shelf/777443.jpg", ThemeFiles.path(Arrays.asList("shelf", "777443.jpg")));
+        assertNull(ThemeFiles.path(Arrays.asList("shelf", "notes.json")));
+        assertNull(ThemeFiles.path(Arrays.asList("shelf", "..")));
+        assertNull(ThemeFiles.path(Collections.singletonList("shelf")));
+    }
+
     @Test public void anythingElseIsRefused() {
         assertNull(ThemeFiles.path(null));
         assertNull(ThemeFiles.path(Collections.emptyList()));
